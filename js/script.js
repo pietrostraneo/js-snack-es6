@@ -72,3 +72,45 @@ for(let i=0; i<teams.length; i++){
     console.log(`Squadra: ${team} con ${fouls} falli subiti`)
 }
 console.log(`Forza juve!!`)
+
+// BONUS 1: SNACK 3
+
+let clothings = [
+    {
+        name: "Poppy",
+        type: "tshirt",
+        color: "red"
+    },
+    {
+        name: "Jumping",
+        type: "occhiali",
+        color: "blue"
+    },
+    {
+        name: "CrissCross",
+        type: "scarpe",
+        color: "black"
+    },
+    {
+        name: "Jenny",
+        type: "borsa",
+        color: "pink"
+    },
+]
+
+function generateList(){
+    let ul = document.querySelector(`ul`)
+    let list = document.createElement(`li`)
+    list.innerText = `Nome: ${name}`
+}
+
+const newclothings = [...clothings];
+for(let i=0; i<clothings.length; i++){
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
+    newclothings[i]["position"] = randomLetter;
+    let { name, type, color, position } = newclothings[i]
+
+}
+
+console.log(newclothings)
