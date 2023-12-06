@@ -15,7 +15,7 @@ let bic = [
     },
     {
         name: "Casati",
-        weight: 9
+        weight: 4
     },
     {
         name: "Colnago",
@@ -23,9 +23,52 @@ let bic = [
     },
 ];
 
+let minweight = bic[0].weight;
+let minbic;
 
-for(let i=0; i<bic.length; i++){
-    let { weight } = bic[i]
-    let minweight = Math.min(weight)
-    console.log(minweight)
+for(let i=1; i<bic.length; i++){
+    let { weight, name } = bic[i]
+    if(weight < minweight){
+        minweight = weight
+        minbic = name
+    }
 }
+console.log(`La bici con peso minore è: ${minbic} con un peso pari a ${minweight}kg`)
+
+// SNACK 2
+
+let teams = [
+    {
+        team: "Juventus",
+        points: 0,
+        fouls: 0
+    },
+    {
+        team: "Napoli",
+        points: 0,
+        fouls: 0
+    },
+    {
+        team: "Inter",
+        points: 0,
+        fouls: 0
+    },
+    {
+        team: "Milan",
+        points: 0,
+        fouls: 0
+    },
+    {
+        team: "Roma",
+        points: 0,
+        fouls: 0
+    },
+]
+
+for(let i=0; i<teams.length; i++){
+    teams[i].points = Math.floor(Math.random() * 100)
+    teams[i].fouls = Math.floor(Math.random() * 100)
+    let { team, fouls } = teams[i]
+    console.log(`Squadra: ${team} con ${fouls} falli subiti`)
+}
+console.log(`Forza juve!!`)
