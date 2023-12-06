@@ -98,19 +98,12 @@ let clothings = [
     },
 ]
 
-function generateList(){
-    let ul = document.querySelector(`ul`)
-    let list = document.createElement(`li`)
-    list.innerText = `Nome: ${name}`
-}
 
 const newclothings = [...clothings];
 for(let i=0; i<clothings.length; i++){
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
     newclothings[i]["position"] = randomLetter;
-    let { name, type, color, position } = newclothings[i]
-
 }
 
 console.log(newclothings)
